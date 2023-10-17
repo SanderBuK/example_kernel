@@ -1,3 +1,4 @@
+ARG GO_VERSION
 FROM golang:${GO_VERSION}-alpine AS base
 
 RUN pip install --upgrade pip ipython ipykernel pyjokes
