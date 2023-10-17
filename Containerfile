@@ -1,4 +1,4 @@
-FROM python:3.7-slim-buster
+FROM golang:${GO_VERSION}-alpine AS base
 
 RUN pip install --upgrade pip ipython ipykernel pyjokes
 
