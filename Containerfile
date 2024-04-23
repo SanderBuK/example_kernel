@@ -1,10 +1,5 @@
-ARG GO_VERSION
-FROM golang:${GO_VERSION}-alpine AS base
+FROM python:3.11-slim
 
-RUN pip install --upgrade pip ipython ipykernel pyjokes
-
-RUN printenv
-
-RUN printenv
+RUN pip install --upgrade pip ipython ipykernel
 
 CMD sh -c 'python -s -m ipykernel_launcher -f ${CONNECTION_FILE}'
